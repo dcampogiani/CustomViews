@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="dc_progress" format="float" />
+    <attr name="dc_progressColor" format="color" />
+    <attr name="dc_progressTextColor" format="color" />
+    <attr name="dc_text" format="string" />
+    <attr name="dc_text_size" format="dimension" />
+    <attr name="dc_text_color" format="color" />
+    <declare-styleable name="ProgressTextView">
+        <attr name="dc_progress" />
+        <attr name="dc_progressColor" />
+        <attr name="dc_progressTextColor" />
+        <attr name="dc_text" />
+        <attr name="dc_text_size" />
+        <attr name="dc_text_color" />
+    </declare-styleable>
+
+
+    <attr name="dc_item_color" format="color" />
+    <attr name="dc_item_spacing" format="dimension" />
+    <declare-styleable name="ChartView">
+        <attr name="dc_item_color" />
+        <attr name="dc_item_spacing" />
+    </declare-styleable>
+
+
+</resources>

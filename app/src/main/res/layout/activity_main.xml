@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/theme_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dark"
+        app:layout_constraintBottom_toTopOf="@id/barrier_theme_selector"
+        app:layout_constraintEnd_toStartOf="@+id/theme_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/theme_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light"
+        app:layout_constraintBottom_toTopOf="@id/barrier_theme_selector"
+        app:layout_constraintEnd_toStartOf="@+id/theme_auto"
+        app:layout_constraintStart_toEndOf="@+id/theme_dark"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/theme_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto"
+        app:layout_constraintBottom_toTopOf="@id/barrier_theme_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/theme_light"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_theme_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom" />
+
+    <com.danielecampogiani.customviews.ProgressTextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@id/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier_theme_selector" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp"
+        android:text="Plus"
+        app:layout_constraintBottom_toTopOf="@id/chart"
+        app:layout_constraintEnd_toStartOf="@id/minus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp"
+        android:text="Minus"
+        app:layout_constraintBottom_toTopOf="@id/chart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/plus"
+        app:layout_constraintTop_toBottomOf="@id/progress" />
+
+    <com.danielecampogiani.customviews.ChartView
+        android:id="@+id/chart"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        app:dc_item_color="@color/chart_selector"
+        app:dc_item_spacing="2dp"
+        app:layout_constraintBottom_toTopOf="@id/animate_chart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minus" />
+
+    <Button
+        android:id="@+id/animate_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Animate Chart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/shuffle_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chart" />
+
+    <Button
+        android:id="@+id/shuffle_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Shuffle Chart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/animate_chart"
+        app:layout_constraintTop_toBottomOf="@id/chart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
